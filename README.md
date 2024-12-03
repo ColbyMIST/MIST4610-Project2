@@ -42,6 +42,7 @@ The Awards table was updated to support awards for both movies and TV shows, add
 # Queries
 
 ![Query Chart](https://github.com/user-attachments/assets/c3d9b774-4d8e-4a99-8f89-792606804393)
+![Image 12-2-24 at 11 03 PM](https://github.com/user-attachments/assets/d826cbd8-346d-4bfd-8074-66cd6a65e4db)
 
 
 
