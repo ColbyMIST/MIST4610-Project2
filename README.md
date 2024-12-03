@@ -250,11 +250,11 @@ Results:
 <img width="315" alt="Query 13" src="https://github.com/user-attachments/assets/75213c9e-09f7-4e18-8a31-c0f06499df84">
 
 
- 14. Identify top-rated tv shows based on average review score across all episodes.
+ 14. Identify top-rated TV shows based on average review score across all episodes.
 
 - Select TV_Show.idshow, TV_Show.title,
-- sum(TV_Show.numberOfSeasons) AS `total seasons`,
-- sum(TV_Show.numberOfEpisodes) AS `Number of Episodes`,
+- count(TV_Show_Season.idTV_Show_Season) AS `total seasons`,
+- count(TV_Show_Episodes.idEpisode) AS `Number of Episodes`,
 - avg(reviewScore) as `Average Review Score`
 - from TV_Show
 - join TV_Show_Season on TV_Show.idshow = TV_Show_Season.idShow
