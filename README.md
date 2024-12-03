@@ -212,6 +212,9 @@ Understanding which genres consistently outperform in revenue helps guide genre 
 
 Justification: Identifying underperforming movies allows management to flag these movies for further investigation. This can allow management to make adjustments to where studios spend their money and how they market movies. This also allows them to see what kind of movies (ex. Romance) tend to do worse and avoid making those movies in the future.
 
+<img width="431" alt="Query 11" src="https://github.com/user-attachments/assets/85aa8651-f4e0-48df-ac0b-b2bf42081e94">
+
+
 12. Which movies from a specific genre released, between a range of years have generated revenue above a certain threshold?
 
 - CREATE Procedure moviesWithGenreRevenueYear(IN genreInput VARCHAR(45),
