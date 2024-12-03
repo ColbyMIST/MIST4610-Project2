@@ -212,6 +212,8 @@ Understanding which genres consistently outperform in revenue helps guide genre 
 
 Justification: Identifying underperforming movies allows management to flag these movies for further investigation. This can allow management to make adjustments to where studios spend their money and how they market movies. This also allows them to see what kind of movies (ex. Romance) tend to do worse and avoid making those movies in the future.
 
+Results:
+
 <img width="431" alt="Query 11" src="https://github.com/user-attachments/assets/85aa8651-f4e0-48df-ac0b-b2bf42081e94">
 
 
@@ -228,6 +230,11 @@ Justification: Identifying underperforming movies allows management to flag thes
 
 Justification: This procedure enables management to focus on specific genres and time periods to assess the success of their investment strategies within those contexts. By specifying date ranges, management can analyze how movie performance in a genre has evolved over time and adapt to changing audience preferences. A procedure also allows more flexibility than a regular query.
 
+Results:
+
+<img width="327" alt="Query 12" src="https://github.com/user-attachments/assets/3bba2e0d-3d05-4f41-a181-59f60a7ee30c">
+
+
 13. Of movies released in the last 15 years, which genres have a percentage of movies produced greater than 10%?
 - Select genreName, count(genreName), (count(genreName) / (select count(*) From movie where
 - releaseYear between 2009 and 2024)) * 100 As `percentage` From Genre
@@ -237,6 +244,11 @@ Justification: This procedure enables management to focus on specific genres and
 - Having `percentage` > 10
 
 Justification: Allows management to see the trend in movie production in the modern age. Management can use the query to see what genres are dominating the box office, and they can use this information to adjust their production decisions in the future. For example, if they see that fantasy movies are dominating the market, they can focus on producing these movies and adjust their marketing to appeal to younger audiences, like elementary school children. 
+
+Results:
+
+<img width="315" alt="Query 13" src="https://github.com/user-attachments/assets/75213c9e-09f7-4e18-8a31-c0f06499df84">
+
 
  14. For each actor, list the number of movies they have performed in for each genre, if the number is > 3
      
@@ -259,6 +271,11 @@ Justification: Management can use this data to make casting decisions. For examp
 - AND `Shows reviewed` = 0;
 
 Justification: Identifying customers who are interested in a specific type of content helps management understand audience preferences and tailor content recommendations  accordingly. They can also do the opposite and try to offer discounts and incentives to try to get these customers to watch shows, like offering free trials on subscription services. It also helps identify opportunities to engage inactive customers (in the TV show department) by recommending specific TV shows based on the movies they reviewed.
+
+Results:
+
+<img width="423" alt="Query 15" src="https://github.com/user-attachments/assets/554ade7e-a08a-45cd-a1f1-469fefc89505">
+
 
 # Tableau Visualizations
 
