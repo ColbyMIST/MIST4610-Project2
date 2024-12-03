@@ -208,7 +208,7 @@ Understanding which genres consistently outperform in revenue helps guide genre 
 - FROMmovie
 - JOIN Box_Office ON movie.idmovie = Box_Office.idmovie
 - Group BY movie.idmovie
-- Having Avg(movie.rating) < 8 AND SUM(TicketsSold) < 5000;
+- Having Avg(movie.rating) <= 7 AND SUM(TicketsSold) < 2000000;
 
 Justification: Identifying underperforming movies allows management to flag these movies for further investigation. This can allow management to make adjustments to where studios spend their money and how they market movies. This also allows them to see what kind of movies (ex. Romance) tend to do worse and avoid making those movies in the future.
 
