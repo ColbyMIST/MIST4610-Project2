@@ -250,17 +250,25 @@ Results:
 <img width="315" alt="Query 13" src="https://github.com/user-attachments/assets/75213c9e-09f7-4e18-8a31-c0f06499df84">
 
 
- 14. For each actor, list the number of movies they have performed in for each genre, if the number is > 3
-     
- -  Select Actor.name, genreName, COUNT(*) From Actor
- - Join Movie_has_Actor ON Actor.idActor = Movie_has_Actor.Actor_idActor
- - Join movie ON movie.idmovie = Movie_has_Actor.movie_idmovie
- - Join Genre ON Genre.idgenre = movie.idgenre
- - Group by Actor.name, genreName
- - Having COUNT(*) > 3
- - ORDERBYCOUNT(*);
+ 14. Identify top-rated tv shows based on average review score across all episodes.
 
-Justification: Management can use this data to make casting decisions. For example, if a studio wants to make an action movie and is looking for someone to play the main character, they can compare how many action movies Actor A (ex. 3) and Actor B (ex. 2) have performed in. If they want somene with more experience, they might hire Actor A. However, if they want someone with less experience who is more likely to be cheaper, they might hire Actor B. 
+- Select TV_Show.idshow, TV_Show.title,
+- sum(TV_Show.numberOfSeasons) AS `total seasons`,
+- sum(TV_Show.numberOfEpisodes) AS `Number of Episodes`,
+- avg(reviewScore) as `Average Review Score`
+- from TV_Show
+- join TV_Show_Season on TV_Show.idshow = TV_Show_Season.idShow
+- join TV_Show_Episodes on TV_Show_Season.idTV_Show_Season = TV_Show_Episodes.idTV_Show_Season
+- join TV_Show_Review on TV_Show.idshow = TV_Show_Review.idShow
+- group by TV_Show.idshow, TV_Show.title
+- order by avg(reviewScore) desc;
+
+Justification: Management can use this data to identify TV shows that are consistently performing well in regards to the average of customer's review scores. This will allow management to easily pick out shows that either stand above the rest, or are not as popular with the customers. Knowing the interests of your customers is one of the most important things in a business, and this query provides one measure to help management identify shows that customers are either enjoying or not. 
+
+Results:
+
+<img width="632" alt="Query 14" src="https://github.com/user-attachments/assets/a4da5954-44f0-4711-950b-4f715b3f79b2">
+
 
 15.  Identify customers who have reviewed movies but not TV shows
 
