@@ -220,6 +220,8 @@ Justification:
 
 Understanding which genres consistently outperform in revenue helps guide genre focus in future productions. 
 
+# Queries 11-15 represent the 5 queries for our project 2 submission
+
 # Query 11
 
 11. Identify underperforming movies based on total tickets sold and the average rating
